@@ -1,0 +1,71 @@
+
+body {
+    font-family:Arial, sans-serif;
+    margin: 0 2em 0 2em;
+    padding: 0;
+    background-color: #f5f5f5; 
+    
+  }
+  
+  header {
+    background-color: #bdd8ff;  /* A shade of blue */
+    color: #fff;  /* White text */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    font-family: Georgia, serif;
+  }
+  
+  h1, h2 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 2px solid #e7e7e7; /* Light gray border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  p, ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li {
+    list-style: none;
+    margin-bottom: 5px;
+  }
+  
+  a {
+    color: #2980b9; /* A darker shade of blue */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Add a hover effect with a subtle color change */
+  section:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-color: #3498db; /* Border color matches header's color */
+  }
+ 
+#about, #experience, #education, #licenses, #skills{
+    background-color: aquamarine;
+    margin-top: 1em;
+    font-family: Georgia, serif;
+}  
