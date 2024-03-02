@@ -1,27 +1,20 @@
-name: Node.js CI
+name: Run Node.js File
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main" ]  # Trigger on pushes to the "main" branch
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main" ]  # Trigger on pull requests to the "main" branch
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]  # Test on multiple Node.js versions
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+    - uses: actions/checkout@v3  # Check out the code
+    - uses: actions/setup-node@v3  # Set up Node.js
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+        node-version: 16.x  # Choose a specific Node.js version
     - run: npm ci  # Install dependencies
-    - run: npm install # Build if a build script exists
-    - run: node index.js # Start the server
+    - run: node index.js  # Run the index.js file
